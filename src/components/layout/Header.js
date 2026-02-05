@@ -7,12 +7,13 @@ const Header = (props) => {
     const [anchorElLeft, setAnchorElLeft] = useState(null);
     const [anchorElRight, setAnchorElRight] = useState(null);
     const { isAdmin } = props;
-    const leftOption = ['Upload'];
+    const leftOption = [];
     const rightOption = ['User', 'About'];
 
     if (isAdmin) {
-        leftOption.push("Extract");
+        leftOption.push("Upload");
         leftOption.push("Delete");
+        leftOption.push("Extract");
     }
 
     const setPage = (page) => {
